@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="create sass lib">
+    <meta name="description" content="create sass lib" />
     <title>sass lib</title>
   </head>
   <body>
@@ -12,9 +12,9 @@
       <div class="container">
         <h2 class="site--title">Shinobi CSS</h2>
         <ul class="items">
-          <li class="item">test 1</li>
-          <li class="item">test 2</li>
-          <li class="item">test 3</li>
+          <li class="item">item 1</li>
+          <li class="item">item 2</li>
+          <li class="item">item 3</li>
         </ul>
       </div>
     </nav>
@@ -24,7 +24,9 @@
       <h2 class="sidebar--title">shinobie doc</h2>
       <p class="sidebar--description">une magnifique librairie avec sass !</p>
       <ul class="sidebar--items">
-        <li class="sidebar--items--item text--hover--orange"><a href="#font-size">font-size</a></li>
+        <li class="sidebar--items--item text--hover--orange">
+          <a href="#font-size">font-size</a>
+        </li>
         <li class="sidebar--items--item"><a href="#colors">colors</a></li>
         <li class="sidebar--items--item"><a href="#card">card</a></li>
       </ul>
@@ -33,7 +35,7 @@
     <h2 id="colors">Colors</h2>
     <span class="text--primary">primary text</span> |
     <span class="text--secondary">secondary text</span> |
-    <span class="text--error">error text</span>  |
+    <span class="text--error">error text</span> |
     <span class="text--info">info text</span> |
     <span class="text--blue">blue text</span> |
     <span class="text--red">red text</span> |
@@ -42,9 +44,9 @@
     <span class="text--purple">purple text</span> |
     <span class="text--orange">orange text</span> |
     <span class="text--gray">gray text</span> |
-  
-    <br><br>
-  
+
+    <br /><br />
+
     <span class="bg--primary text--white">bg primary</span> |
     <span class="bg--secondary text--white">bg secondary</span> |
     <span class="bg--error text--white">bg error</span> |
@@ -56,7 +58,7 @@
     <span class="bg--purple text--white">bg purple</span> |
     <span class="bg--orange text--white">bg orange</span> |
     <span class="bg--gray text--white">bg gray</span> |
-  
+
     <span class="bg--primary--dark--8 text--white">primary dark 8</span> |
     <span class="bg--primary--dark--6 text--white">primary dark 6</span> |
     <span class="bg--primary--dark--4 text--white">primary dark 4</span> |
@@ -67,10 +69,8 @@
     <span class="bg--primary--light--6 text--white">primary light 6</span> |
     <span class="bg--primary--light--8 text--white">primary light 8</span> |
 
-    
-  <br><br>
-  <a href="#" class="text--primary text--hover--orange--light--1">hover me</a>
-
+    <br /><br />
+    <a href="#" class="text--primary text--hover--orange--light--1">hover me</a>
 
     <!-- font sizes -->
 
@@ -78,10 +78,12 @@
     <h2 id="card">Cards</h2>
     <div class="card">
       <h1 class="card--title">This is a card title</h1>
-      <p class="card--body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, rerum. Reiciendis error
-        sunt fugit praesentium <a href="#">quisquam voluptates</a> voluptatibus minus? Exercitationem expedita praesentium
-        ipsam magnam
-        est quis odit officiis, quas dolorem.</p>
+      <p class="card--body">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus,
+        rerum. Reiciendis error sunt fugit praesentium
+        <a href="#">quisquam voluptates</a> voluptatibus minus? Exercitationem
+        expedita praesentium ipsam magnam est quis odit officiis, quas dolorem.
+      </p>
     </div>
 
     <!-- button -->
@@ -90,44 +92,73 @@
     <a href="#" class="btn-secondary text-white">click me</a>
     <a href="#" class="btn-error text-white">click me</a>
     <a href="#" class="btn-info">click me</a>
-    <a href="#" class="btn-outlined-purple text-purple text-hover-white">click me</a>
-    <a href="#" class="btn-outlined-orange text-orange text-hover-white">click me</a>
+    <a href="#" class="btn-outlined-purple text-purple text-hover-white"
+      >click me</a
+    >
+    <a href="#" class="btn-outlined-orange text-orange text-hover-white"
+      >click me</a
+    >
     <!-- grid system -->
-        <!-- grid system -->
-        <h2 class="mb-2">Grid System</h2>
-        <div class="row gap-2 justify--center">
-          <div class="col-12-xs col-5-sm col-3-xl">
-            <div class="card">
-              <h3 class="card-title">Hello, ninjas</h3>
-              <p class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-          </div>
-          <div class="col-12-xs col-5-sm col-3-xl">
-            <div class="card">
-              <h3 class="card-title">Hello, ninjas</h3>
-              <p class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-          </div>
-          <div class="col-12-xs col-5-sm col-3-xl">
-            <div class="card">
-              <h3 class="card-title">Hello, ninjas</h3>
-              <p class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-          </div>
-          <div class="col-12-xs col-5-sm col-3-xl">
-            <div class="card">
-              <h3 class="card-title">Hello, ninjas</h3>
-              <p class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-          </div>
+    <!-- grid system -->
+    <h2 class="mb-2">Grid System</h2>
+    <div class="row gap-2 justify--center">
+      <div class="col-12-xs col-5-sm col-3-xl">
+        <div class="card">
+          <h3 class="card-title">Hello, ninjas</h3>
+          <p class="card-body">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          </p>
         </div>
+      </div>
+      <div class="col-12-xs col-5-sm col-3-xl">
+        <div class="card">
+          <h3 class="card-title">Hello, ninjas</h3>
+          <p class="card-body">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          </p>
+        </div>
+      </div>
+      <div class="col-12-xs col-5-sm col-3-xl">
+        <div class="card">
+          <h3 class="card-title">Hello, ninjas</h3>
+          <p class="card-body">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          </p>
+        </div>
+      </div>
+      <div class="col-12-xs col-5-sm col-3-xl">
+        <div class="card">
+          <h3 class="card-title">Hello, ninjas</h3>
+          <p class="card-body">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          </p>
+        </div>
+      </div>
+    </div>
     <!-- utilities -->
-    <!-- <p class="space-10">space 10</p>
-    <p class="space-20">space 20</p>
-    <p class="space-30">space 30</p> -->
-    <a href="#" class="btn-complement-purple">click me</a>
-    <a href="#" class="btn-complement-primary">click me</a>
-  
+    <h1>relative height & width</h1>
+    <div class="w--6-12 h--6-12 bg--orange--light--1 pl--3">
+      <h1>1 => 6</h1>
+      <pre><code>w--[view]-[max-view]</code></pre>
+      <pre><code>w--3-6</code></pre>
+      <h1>1=>12</h1>
+      <pre><code>w--[view]-[max-view]</code></pre>
+      <pre><code>w--6-12</code></pre>
+    </div>
+    <h1>select</h1>
+    <select name="dropdown" id="dropdown" class="dropdown">
+      <option value="value 1" class="item">value 1</option>
+      <option value="value 2" class="item">value 2</option>
+      <option value="value 3" class="item">value 3</option>
+      <option value="value 4" class="item">value 4</option>
+    </select>
+    <h1>checkbox</h1>
+    <label class="checkbox--orange"
+      >One
+      <input type="checkbox" checked="checked" class="checkbox--input" />
+      <span class="checkbox--mark"></span>
+    </label>
+
     <script src="./main.js" type="module"></script>
   </body>
 </html>
