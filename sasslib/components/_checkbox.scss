@@ -1,0 +1,53 @@
+@use "sass:map";
+
+@mixin checkbox($bg-hover, $bg-checked, $bg-idle) {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: fit-content;
+
+  &:hover {
+    .checkbox--mark {
+      background-color: $bg-hover;
+    }
+  }
+
+  .checkbox--input {
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    opacity: 0;
+
+    &:checked {
+      ~ .checkbox--mark {
+        background-color: $bg-checked;
+      }
+    }
+  }
+
+  .checkbox--mark {
+    position: absolute;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    display: block;
+    background-color: $bg-idle;
+  }
+}
+
+.checkbox {
+  @include checkbox(map.get($colors, "gray"), black, #eee);
+}
+
+@each $key, $value in $colors {
+  .checkbox--#{$key} {
+    @include checkbox(mix(white, $value, 10%), darken($value, 10%), #eee);
+  }
+}
