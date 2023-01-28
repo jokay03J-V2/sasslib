@@ -1,9 +1,9 @@
 //variables & functions
 @import "functions";
-@import 'variables';
+@import "variables";
 
 //base & layout
-@import 'base';
+@import "base";
 
 //breakpoints
 @import "breakpoints";
@@ -12,7 +12,7 @@
 @import "grid";
 
 //colors
-@import 'colors';
+@import "colors";
 
 //components
 @import "components/card";
@@ -20,6 +20,8 @@
 @import "components/button";
 @import "components/navbar";
 @import "components/badge";
+@import "components/dropdown";
+@import "components/checkbox";
 
 //utilities
 @import "utilities";
