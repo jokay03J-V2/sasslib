@@ -148,6 +148,13 @@
   }
 }
 
+//flex-direction
+@each $val in $flex-direction {
+  .f--direction--#{$val} {
+    flex-direction: $val;
+  }
+}
+
 //heights
 @each $key, $val in $heights {
   .h--#{$key} {
