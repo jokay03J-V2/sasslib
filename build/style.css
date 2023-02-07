@@ -14268,6 +14268,22 @@ img {
   font-size: 3rem;
 }
 
+.f--direction--column {
+  flex-direction: column;
+}
+
+.f--direction--column-reverse {
+  flex-direction: column-reverse;
+}
+
+.f--direction--row {
+  flex-direction: row;
+}
+
+.f--direction--row-reverse {
+  flex-direction: row-reverse;
+}
+
 .h--full {
   height: 100%;
 }
