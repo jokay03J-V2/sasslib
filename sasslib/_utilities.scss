@@ -140,6 +140,14 @@
     align-items: $val;
   }
 }
+
+//font-size
+@each $key, $val in $font-size {
+  .text--#{$key} {
+    font-size: $base-font-size * $val;
+  }
+}
+
 //heights
 @each $key, $val in $heights {
   .h--#{$key} {
