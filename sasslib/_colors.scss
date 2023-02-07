@@ -32,6 +32,10 @@
         color: mix(white, $val, $i * 10%);
       }
     }
+
+    .border--#{$key}--light--#{$i} {
+      border-color: mix(white, $val, $i * 10%);
+    }
   }
 
   //dark variation
@@ -48,6 +52,10 @@
       &:hover {
         color: mix(white, $val, $i * 10%);
       }
+    }
+
+    .border--#{$key}--dark--#{$i} {
+      border-color: mix(white, $val, $i * 10%);
     }
   }
 }
