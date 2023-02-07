@@ -114,6 +114,7 @@
   }
 }
 
+//borders
 @each $key, $value in $rounded {
   .rounded--#{$key} {
     border-radius: $value;
@@ -126,38 +127,29 @@
   }
 }
 
-//static utilities class
-//heights
-.h--full {
-  height: 100%;
+//displays
+@each $val in $displays {
+  .d--#{$val} {
+    display: $val;
+  }
 }
 
-.h--screen {
-  height: 100vh;
+//alignement
+@each $val in $align-items {
+  .items--#{$val} {
+    align-items: $val;
+  }
+}
+//heights
+@each $key, $val in $heights {
+  .h--#{$key} {
+    height: $val;
+  }
 }
 
 //widths
-.w--full {
-  width: 100%;
-}
-
-.w--screen {
-  width: 100vw;
-}
-
-//displays
-
-//display flex
-.d--flex {
-  display: flex;
-}
-
-//display block
-.d-block {
-  display: block;
-}
-
-//display grid
-.d-grid {
-  display: grid;
+@each $key, $val in $widths {
+  .w--#{$key} {
+    width: $val;
+  }
 }
