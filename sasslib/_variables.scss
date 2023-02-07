@@ -32,6 +32,31 @@ $rounded: (
   "xl": 25px,
 );
 
+//font-size
+$font-size: (
+  "xs": 0.75,
+  "sm": 1.5,
+  "md": 2,
+  "lg": 2.5,
+  "xl": 3,
+);
+
+//heights
+$heights: (
+  "full": 100%,
+  "screen": 100vh,
+);
+
+//widths
+$widths: (
+  "full": 100%,
+  "screen": 100vw,
+);
+
+//displays
+$displays: flex, grid, none, hidden, block, inline, inline-block;
+
+//border
 $border-style: solid, none, dotted, inset, dashed, groove, ridge, hidden, outset;
 
 //spacing
@@ -55,3 +80,6 @@ $font-size-sm: $base-font-size * 0.75;
 $font-size-lg: $base-font-size * 1.5;
 $font-size-xl: $base-font-size * 2;
 $font-size-xxl: $base-font-size * 3;
+
+//align-items
+$align-items: center, start, end, baseline, normal;
