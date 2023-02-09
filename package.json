@@ -1,7 +1,7 @@
 {
   "name": "shinobie",
   "private": false,
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "beautiful css module",
   "homepage": "https://github.com/jokay03J-V2/sasslib",
   "author": {
@@ -19,6 +19,7 @@
   "main": "./build/style.css",
   "scripts": {
     "dev": "vite",
+    "dev:host": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
     "sass:build": "sass sasslib/style.scss build/style.css"
