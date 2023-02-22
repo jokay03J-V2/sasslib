@@ -1,10 +1,10 @@
-[![npm badge](https://nodei.co/npm-dl/shinobie.png)](https://npmjs.com/package/shinobie)\
-[![monthly downloads](https://img.shields.io/npm/dm/shinobie?style=flat-square)](https://npmjs.com/package/shinobie)
-[![minified package](https://img.shields.io/bundlephobia/min/shinobie?style=flat-square)](https://npmjs.com/package/shinobie)
-[![package version](https://img.shields.io/npm/v/shinobie?style=flat-square)](https://npmjs.com/package/shinobie)
-[![package license](https://img.shields.io/npm/l/shinobie?style=flat-square)](https://npmjs.com/package/shinobie)
+[![npm badge](https://nodei.co/npm-dl/sasslib.png)](https://npmjs.com/package/sasslib)\
+[![monthly downloads](https://img.shields.io/npm/dm/sasslib?style=flat-square)](https://npmjs.com/package/sasslib)
+[![minified package](https://img.shields.io/bundlephobia/min/sasslib?style=flat-square)](https://npmjs.com/package/sasslib)
+[![package version](https://img.shields.io/npm/v/sasslib?style=flat-square)](https://npmjs.com/package/sasslib)
+[![package license](https://img.shields.io/npm/l/sasslib?style=flat-square)](https://npmjs.com/package/sasslib)
 
-# shinobie
+# sasslib
 
 beautiful css mobule
 
@@ -18,4 +18,8 @@ this projet is for education only
 
 # credit
 
-thanks to [the net ninja](https://www.youtube.com/@NetNinja)
+thanks to [the net ninja](https://www.youtube.com/@NetNinja) for original idea
+
+## fonts
+
+thanks to [Poppins font](https://fonts.google.com/specimen/Poppins) and their authors(Indian Type Foundry, and Jonny Pinhorn)
