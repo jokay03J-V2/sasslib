@@ -1,8 +1,8 @@
-[![npm badge](https://nodei.co/npm-dl/sasslib.png)](https://npmjs.com/package/sasslib)\
-[![monthly downloads](https://img.shields.io/npm/dm/sasslib?style=flat-square)](https://npmjs.com/package/sasslib)
-[![minified package](https://img.shields.io/bundlephobia/min/sasslib?style=flat-square)](https://npmjs.com/package/sasslib)
-[![package version](https://img.shields.io/npm/v/sasslib?style=flat-square)](https://npmjs.com/package/sasslib)
-[![package license](https://img.shields.io/npm/l/sasslib?style=flat-square)](https://npmjs.com/package/sasslib)
+[![npm badge](https://nodei.co/npm/@jokay03j-v2/sasslib.png)](https://www.npmjs.com/package/@jokay03j-v2/sasslib)\
+[![monthly downloads](https://img.shields.io/npm/dw/@jokay03j-v2/sasslib?style=flat-square)](https://www.npmjs.com/package/@jokay03j-v2/sasslib)
+[![minified package](https://img.shields.io/bundlephobia/min/@jokay03j-v2/sasslib?style=flat-square)](https://www.npmjs.com/package/@jokay03j-v2/sasslib)
+[![package version](https://img.shields.io/npm/v/@jokay03j-v2/sasslib?style=flat-square)](https://www.npmjs.com/package/@jokay03j-v2/sasslib)
+[![package license](https://img.shields.io/npm/l/@jokay03j-v2/sasslib?style=flat-square)](https://www.npmjs.com/package/@jokay03j-v2/sasslib)
 
 # sasslib
 
