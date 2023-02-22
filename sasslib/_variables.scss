@@ -45,12 +45,16 @@ $font-size: (
 $heights: (
   "full": 100%,
   "screen": 100vh,
+  "auto": auto,
+  "fit": fit-content,
 );
 
 //widths
 $widths: (
   "full": 100%,
   "screen": 100vw,
+  "auto": auto,
+  "fit": fit-content,
 );
 
 //flex direction
@@ -86,3 +90,6 @@ $font-size-xxl: $base-font-size * 3;
 
 //align-items
 $align-items: center, start, end, baseline, normal;
+
+//gap
+$base-gap: 0.75rem;
