@@ -26,18 +26,6 @@
       </div>
     </nav>
     <h1 id="font-size" class="row justify--center">this is a h1</h1>
-    <div class="badge">badge</div>
-    <aside class="sidebar">
-      <h2 class="sidebar--title">shinobie doc</h2>
-      <p class="sidebar--description">une magnifique librairie avec sass !</p>
-      <ul class="sidebar--items">
-        <li class="sidebar--items--item text--hover--orange">
-          <a href="#font-size">font-size</a>
-        </li>
-        <li class="sidebar--items--item"><a href="#colors">colors</a></li>
-        <li class="sidebar--items--item"><a href="#card">card</a></li>
-      </ul>
-    </aside>
     <!-- colors -->
     <h2 id="colors">Colors</h2>
     <span class="text--primary">primary text</span> |
@@ -108,35 +96,35 @@
     <!-- grid system -->
     <!-- grid system -->
     <h2 class="mb-2">Grid System</h2>
-    <div class="row gap-2 justify--center">
-      <div class="col-12-xs col-5-sm col-3-xl">
+    <div class="row gap--2 justify--center">
+      <div class="col--12--xs col--5--sm col--3--xl">
         <div class="card">
-          <h3 class="card-title">Hello, ninjas</h3>
-          <p class="card-body">
+          <h3 class="card--title">Hello, ninjas</h3>
+          <p class="card--body">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
           </p>
         </div>
       </div>
-      <div class="col-12-xs col-5-sm col-3-xl">
+      <div class="col--12--xs col--5--sm col--3--xl">
         <div class="card">
-          <h3 class="card-title">Hello, ninjas</h3>
-          <p class="card-body">
+          <h3 class="card--title">Hello, ninjas</h3>
+          <p class="card--body">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
           </p>
         </div>
       </div>
-      <div class="col-12-xs col-5-sm col-3-xl">
+      <div class="col--12--xs col--5--sm col--3--xl">
         <div class="card">
-          <h3 class="card-title">Hello, ninjas</h3>
-          <p class="card-body">
+          <h3 class="card--title">Hello, ninjas</h3>
+          <p class="card--body">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
           </p>
         </div>
       </div>
-      <div class="col-12-xs col-5-sm col-3-xl">
+      <div class="col--12--xs col--5--sm col--3--xl">
         <div class="card">
-          <h3 class="card-title">Hello, ninjas</h3>
-          <p class="card-body">
+          <h3 class="card--title">Hello, ninjas</h3>
+          <p class="card--body">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
           </p>
         </div>
@@ -152,19 +140,21 @@
       <pre><code>w--[view]-[max-view]</code></pre>
       <pre><code>w--6-12</code></pre>
     </div>
-    <h1>select</h1>
-    <select name="dropdown" id="dropdown" class="dropdown">
-      <option value="value 1" class="item">value 1</option>
-      <option value="value 2" class="item">value 2</option>
-      <option value="value 3" class="item">value 3</option>
-      <option value="value 4" class="item">value 4</option>
-    </select>
     <h1>checkbox</h1>
     <label class="checkbox--orange"
       >One
       <input type="checkbox" checked="checked" class="checkbox--input" />
       <span class="checkbox--mark"></span>
     </label>
+    <h1>breakpoints</h1>
+    <ul class="d--flex f--direction--column ml--0 sm--ml--1 md--ml--2">
+      <li>xs(0px)</li>
+      <li>md</li>
+      <li>sm</li>
+      <li>lg</li>
+      <li>xl</li>
+    </ul>
+    <h1 class="text--orange lg--text--black">exemples</h1>
 
     <script src="./main.js" type="module"></script>
   </body>
