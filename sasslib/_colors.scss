@@ -17,6 +17,28 @@
     border-color: $val;
   }
 
+  @each $keyBreakpoints, $valueBreakpoints in $breakpoints {
+    @media screen and (min-width: $valueBreakpoints) {
+      .#{$keyBreakpoints}--text--#{$key} {
+        color: $val !important;
+      }
+
+      .#{$keyBreakpoints}--bg--#{$key} {
+        background-color: $val !important;
+      }
+
+      .#{$keyBreakpoints}--text--hover--#{$key} {
+        &:hover {
+          color: $val !important;
+        }
+      }
+
+      .#{$keyBreakpoints}--border--#{$key} {
+        border-color: $val !important;
+      }
+    }
+  }
+
   //light variation
   @for $i from 1 through 9 {
     .text--#{$key}--light--#{$i} {
@@ -35,6 +57,30 @@
 
     .border--#{$key}--light--#{$i} {
       border-color: mix(white, $val, $i * 10%);
+    }
+
+    //breakpoints
+
+    @each $keyBreakpoints, $valueBreakpoints in $breakpoints {
+      @media screen and (min-width: $valueBreakpoints) {
+        .#{$keyBreakpoints}--text--#{$key}--light--#{$i} {
+          color: mix(white, $val, $i * 10%) !important;
+        }
+
+        .#{$keyBreakpoints}--bg--#{$key}--light--#{$i} {
+          background-color: mix(white, $val, $i * 10%) !important;
+        }
+
+        .#{$keyBreakpoints}--text--hover--#{$key}--light--#{$i} {
+          &:hover {
+            color: mix(white, $val, $i * 10%) !important;
+          }
+        }
+
+        .#{$keyBreakpoints}--border--#{$key}--light--#{$i} {
+          border-color: mix(white, $val, $i * 10%) !important;
+        }
+      }
     }
   }
 
@@ -57,11 +103,43 @@
     .border--#{$key}--dark--#{$i} {
       border-color: mix(white, $val, $i * 10%);
     }
+
+    //breakpoints
+
+    @each $keyBreakpoints, $valueBreakpoints in $breakpoints {
+      @media screen and (min-width: $valueBreakpoints) {
+        .#{$keyBreakpoints}--text--#{$key}--dark--#{$i} {
+          color: mix(black, $val, $i * 10%) !important;
+        }
+
+        .#{$keyBreakpoints}--bg--#{$key}--dark--#{$i} {
+          background-color: mix(black, $val, $i * 10%) !important;
+        }
+
+        .#{$keyBreakpoints}--text--hover--#{$key}--dark--#{$i} {
+          &:hover {
+            color: mix(white, $val, $i * 10%) !important;
+          }
+        }
+
+        .#{$keyBreakpoints}--border--#{$key}--dark--#{$i} {
+          border-color: mix(white, $val, $i * 10%) !important;
+        }
+      }
+    }
   }
 }
 
 @for $i from 1 through 99 {
   .border--#{$i} {
     border-width: $base-border-thickness * $i;
+  }
+
+  @each $keyBreakpoints, $valueBreakpoints in $breakpoints {
+    @media screen and (min-width: $valueBreakpoints) {
+      .#{$keyBreakpoints}--border--#{$i} {
+        border-width: $base-border-thickness * $i !important;
+      }
+    }
   }
 }
