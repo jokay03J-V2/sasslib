@@ -8,6 +8,18 @@
     .w--#{$i}-#{$max-view} {
       width: $min-pourcentage * $i;
     }
+
+    @each $keyBreakpoints, $valueBreakpoints in $breakpoints {
+      @media screen and (min-width: $valueBreakpoints) {
+        .#{$keyBreakpoints}--h--#{$i}-#{$max-view} {
+          height: $min-pourcentage * $i;
+        }
+
+        .#{$keyBreakpoints}--w--#{$i}-#{$max-view} {
+          width: $min-pourcentage * $i;
+        }
+      }
+    }
   }
 }
 
@@ -112,18 +124,143 @@
   .w--#{$i} {
     width: $base-width * $i;
   }
-}
 
-//borders
-@each $key, $value in $rounded {
-  .rounded--#{$key} {
-    border-radius: $value;
+  .gap--#{$i} {
+    gap: $base-gap * $i;
+  }
+
+  //breakpoints utilities
+
+  @each $keyBreakpoints, $valueBreakpoints in $breakpoints {
+    @media screen and (min-width: $valueBreakpoints) {
+      //margins
+      //margin
+      .#{$keyBreakpoints}--m--#{$i} {
+        margin: ($base-margin * $i) !important;
+      }
+
+      //margin-left
+      .#{$keyBreakpoints}--ml--#{$i} {
+        margin-left: ($base-margin * $i) !important;
+      }
+
+      //margin--right
+      .#{$keyBreakpoints}--mr--#{$i} {
+        margin-right: ($base-margin * $i) !important;
+      }
+
+      //margin-left & margin-right
+      .#{$keyBreakpoints}--mx--#{$i} {
+        margin-right: ($base-margin * $i) !important;
+        margin-left: ($base-margin * $i) !important;
+      }
+
+      //margin--top
+      .#{$keyBreakpoints}--mt--#{$i} {
+        margin-top: ($base-margin * $i) !important;
+      }
+
+      //margin-bottom
+      .#{$keyBreakpoints}--mb--#{$i} {
+        margin-bottom: ($base-margin * $i) !important;
+      }
+
+      //margin-top & margin-bottom
+      .#{$keyBreakpoints}--my--#{$i} {
+        margin-top: ($base-margin * $i) !important;
+        margin-bottom: ($base-margin * $i) !important;
+      }
+
+      //paddings
+      .#{$keyBreakpoints}--p--#{$i} {
+        padding: $base-padding * $i !important;
+      }
+
+      //padding-left
+      .#{$keyBreakpoints}--pl--#{$i} {
+        padding-left: $base-padding * $i !important;
+      }
+
+      //padding-right
+      .#{$keyBreakpoints}--pr--#{$i} {
+        padding-right: $base-padding * $i !important;
+      }
+
+      //padding-right & padding-left
+      .#{$keyBreakpoints}--px--#{$i} {
+        padding-right: $base-padding * $i !important;
+        padding-left: $base-padding * $i !important;
+      }
+
+      //padding top
+      .#{$keyBreakpoints}--pt--#{$i} {
+        padding-top: $base-padding * $i !important;
+      }
+
+      //padding bottom
+      .#{$keyBreakpoints}--pb--#{$i} {
+        padding-bottom: $base-padding * $i !important;
+      }
+
+      //padding-bottom & padding-top
+      .#{$keyBreakpoints}--py--#{$i} {
+        padding-top: $base-padding * $i !important;
+        padding-bottom: $base-padding * $i !important;
+      }
+
+      //height
+      .#{$keyBreakpoints}--h--#{$i} {
+        height: $base-height * $i !important;
+      }
+
+      //min-height
+      .#{$keyBreakpoints}--min--h--#{$i} {
+        min-height: $base-height * $i !important;
+      }
+
+      //min-width
+      .#{$keyBreakpoints}--min--w--#{$i} {
+        min-width: $base-width * $i !important;
+      }
+
+      //width
+      .#{$keyBreakpoints}--w--#{$i} {
+        width: $base-width * $i !important;
+      }
+
+      .#{$keyBreakpoints}--gap--#{$i} {
+        gap: $base-gap * $i !important;
+      }
+    }
   }
 }
 
-@each $value in $border-style {
-  .border--#{$value} {
-    border-style: $value;
+//borders
+//border radius
+@each $borderRadiusKey, $borderRadiusValue in $rounded {
+  .rounded--#{$borderRadiusKey} {
+    border-radius: $borderRadiusValue;
+  }
+
+  @each $keyBreakpoints, $valueBreakpoints in $breakpoints {
+    .#{$keyBreakpoints}--rounded--#{$borderRadiusKey} {
+      border-radius: $borderRadiusValue;
+    }
+  }
+}
+
+//border style
+@each $borderStyleValue in $border-style {
+  .border--#{$borderStyleValue} {
+    border-style: $borderStyleValue;
+  }
+
+  @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
+    @media screen and (min-width: $valueBreakpoint) {
+      .#{$keyBreakpoints}--border--#{$borderStyleValue} {
+        border-style: $borderStyleValue;
+      }
+    }
   }
 }
 
@@ -132,19 +269,43 @@
   .d--#{$val} {
     display: $val;
   }
+
+  @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
+    @media screen and (min-width: $valueBreakpoint) {
+      .#{$keyBreakpoints}--d--#{$val} {
+        display: $val;
+      }
+    }
+  }
 }
 
-//alignement
+//flex alignement
 @each $val in $align-items {
   .items--#{$val} {
     align-items: $val;
   }
+
+  @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
+    @media screen and (min-width: $valueBreakpoint) {
+      .#{$keyBreakpoints}--items--#{$val} {
+        align-items: $val;
+      }
+    }
+  }
 }
 
 //font-size
-@each $key, $val in $font-size {
-  .text--#{$key} {
+@each $keyFont, $val in $font-size {
+  .text--#{$keyFont} {
     font-size: $base-font-size * $val;
+  }
+
+  @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
+    @media screen and (min-width: $valueBreakpoint) {
+      .#{$keyBreakpoints}--text--#{$keyFont} {
+        font-size: $base-font-size * $val !important;
+      }
+    }
   }
 }
 
@@ -153,18 +314,42 @@
   .f--direction--#{$val} {
     flex-direction: $val;
   }
+
+  @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
+    @media screen and (min-width: $valueBreakpoint) {
+      .#{$keyBreakpoints}--f--direction--#{$val} {
+        flex-direction: $val !important;
+      }
+    }
+  }
 }
 
 //heights
-@each $key, $val in $heights {
-  .h--#{$key} {
+@each $keyHeights, $val in $heights {
+  .h--#{$keyHeights} {
     height: $val;
+  }
+
+  @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
+    @media screen and (min-width: $valueBreakpoint) {
+      .#{$keyBreakpoints}--h--#{$keyHeights} {
+        height: $val !important;
+      }
+    }
   }
 }
 
 //widths
-@each $key, $val in $widths {
-  .w--#{$key} {
+@each $keyWidths, $val in $widths {
+  .w--#{$keyWidths} {
     width: $val;
+  }
+
+  @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
+    @media screen and (min-width: $valueBreakpoint) {
+      .#{$keyBreakpoints}--w--#{$keyWidths} {
+        width: $val !important;
+      }
+    }
   }
 }
