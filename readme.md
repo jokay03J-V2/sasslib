@@ -8,6 +8,10 @@
 
 beautiful css mobule
 
+# shinobie
+
+shinobie is deprecated and no longer receive major update
+
 # documentation
 
 documentation is [here](https://jokay03j-v2.github.io/sasslib/)
