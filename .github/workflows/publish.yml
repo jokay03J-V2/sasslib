@@ -24,11 +24,11 @@ jobs:
       - name: Install dependency
         run: npm ci
 
-      - name: Run linters
-        uses: wearerequired/lint-action@v2.3.0
-        with:
-          eslint: true
-          prettier: true
+      - name: Run eslint
+        run: npm run lint
+        
+      - name: run prettier
+        run: npm run prettier:format
 
   publish_package:
     needs: [linters]
