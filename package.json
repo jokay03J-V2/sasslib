@@ -1,34 +1,52 @@
 {
-  "name": "shinobie",
+  "name": "@jokay03j-v2/react-sasslib",
   "private": false,
-  "version": "1.0.10",
-  "description": "beautiful css module",
-  "homepage": "https://jokay03j-v2.github.io/sasslib/",
-  "repository": "https://github.com/jokay03J-V2/sasslib",
+  "version": "1.0.0",
+  "description": "react components wrapper for sasslib",
+  "homepage": "https://jokay03j-v2.github.io/sasslib/react",
+  "repository": "https://github.com/jokay03J-V2/sasslib/tree/react-sasslib",
   "author": {
     "name": "jokay03j-v2",
-    "url": "https://github.com/jokay03J"
+    "url": "https://github.com/jokay03J-V2"
   },
+  "contributors": [
+    {
+      "name": "jokay03J",
+      "url": "https://github.com/jokay03J"
+    }
+  ],
   "keywords": [
     "sass",
     "ui"
   ],
   "type": "module",
-  "main": "./build/style.min.css",
-  "license": "MIT",
-  "engines": {
-    "node": ">=8"
-  },
   "scripts": {
     "dev": "vite",
-    "dev:host": "vite --host",
-    "build": "vite build",
+    "build": "tsc && vite build",
     "preview": "vite preview",
-    "sass:build": "sass sasslib/style.scss build/style.css & minify build/style.css > build/style.min.css"
+    "publishToNPM": "tsc && npm publish"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "build/lib/index.js",
+  "types": "build/lib/index.d.ts",
   "devDependencies": {
-    "minify": "^9.2.0",
-    "sass": "^1.57.1",
-    "vite": "^4.0.0"
+    "@jokay03j-v2/sasslib": "^1.1.0",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@vitejs/plugin-react": "^3.1.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "^34.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.32.2",
+    "prettier": "2.8.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.9.5",
+    "vite": "^4.1.0"
   }
 }
