@@ -1,21 +1,27 @@
-[![npm badge](https://nodei.co/npm-dl/shinobie.png)](https://npmjs.com/package/shinobie)\
-[![monthly downloads](https://img.shields.io/npm/dm/shinobie?style=flat-square)](https://npmjs.com/package/shinobie)
-[![minified package](https://img.shields.io/bundlephobia/min/shinobie?style=flat-square)](https://npmjs.com/package/shinobie)
-[![package version](https://img.shields.io/npm/v/shinobie?style=flat-square)](https://npmjs.com/package/shinobie)
-[![package license](https://img.shields.io/npm/l/shinobie?style=flat-square)](https://npmjs.com/package/shinobie)
+# react-sasslib
 
-# shinobie
+react components wrapper for sasslib
 
-beautiful css mobule
+# availables components
 
-# documentation
+| components | available |
+| ---------- | --------- |
+| Navbar     | ✅        |
+| Card       | ✅        |
+| Button     | ✅        |
 
-documentation is [here](https://jokay03j-v2.github.io/sasslib/)
+# API Doc
 
-# disclaimer
+apis of react-sasslib is [here](https://jokay03j-v2.github.io/sasslib/react)
 
-this projet is for education only
+# getting started
 
-# credit
+1. ```bash
+   npm i @jokay03j-v2/react-sasslib @jokay03j-v2/sasslib
+   ```
 
-thanks to [the net ninja](https://www.youtube.com/@NetNinja)
+2. import sasslib and import availables components([see here](#availables-components))
+
+# exemple
+
+main exemple is [here](./src/App.tsx)
