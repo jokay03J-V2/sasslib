@@ -2,7 +2,7 @@ import { Button, Card, Navbar } from "./lib/index";
 import React from "react";
 import "@jokay03j-v2/sasslib";
 
-function App() {
+function App(): JSX.Element {
   return (
     <div>
       <Navbar
@@ -20,7 +20,7 @@ function App() {
         <Card.Title as="h2">titre card</Card.Title>
         <Card.Body className="text--gray">test body card</Card.Body>
       </Card>
-      <Button color="blue" className="text--white">
+      <Button color="primary" className="text--white">
         test
       </Button>
     </div>

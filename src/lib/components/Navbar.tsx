@@ -1,4 +1,4 @@
-import React, { LiHTMLAttributes, MenuHTMLAttributes } from "react";
+import React, { type LiHTMLAttributes, type MenuHTMLAttributes } from "react";
 
 export interface NavbarProps extends MenuHTMLAttributes<HTMLMenuElement> {
   /**
@@ -37,11 +37,11 @@ function NavbarRoot({
   navbarTitle,
   menuBtnChildren,
   ...props
-}: NavbarProps) {
+}: NavbarProps): JSX.Element {
   return (
     <nav
       {...props}
-      className={`navbar--${color} ${props.className && props.className}`}
+      className={`navbar--${color} ${(props.className != null) ? props.className : "" }`}
     >
       <div className="container">
         <h2 className="site--title">{navbarTitle}</h2>
@@ -65,10 +65,10 @@ export interface NavbarItemProps extends LiHTMLAttributes<HTMLLIElement> {}
 /**
  * Navbar item
  */
-function Item({ children, ...props }: NavbarItemProps) {
+function Item({ children, ...props }: NavbarItemProps): JSX.Element {
   return <li {...props}>{children}</li>;
 }
 
-export let Navbar = Object.assign(NavbarRoot, {
+export const Navbar = Object.assign(NavbarRoot, {
   Item,
 });

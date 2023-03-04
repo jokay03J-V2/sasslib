@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes } from "react";
+import React, { type ButtonHTMLAttributes } from "react";
 
 export interface ButtonInterface
   extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -21,12 +21,13 @@ export interface ButtonInterface
     | "white";
 }
 
-export function Button({ children, color, ...props }: ButtonInterface) {
+export function Button({ children, color, ...props }: ButtonInterface): JSX.Element {
   return (
     <button
       {...props}
-      className={`${color ? `btn--${color}` : `btn`} ${
-        props.className && props.className
+      // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+      className={`${color !== null ? `btn--${color}` : "btn"} ${
+        props.className != null ? props.className : ""
       }`}
     >
       {children}

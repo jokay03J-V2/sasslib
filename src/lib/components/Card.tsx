@@ -1,14 +1,14 @@
-import React, { HtmlHTMLAttributes } from "react";
+import React, { type HtmlHTMLAttributes } from "react";
 
 export interface CardRootProps extends HtmlHTMLAttributes<HTMLElement> {}
 
 /**
  * Card Root
  */
-function CardRoot({ children, ...props }: CardRootProps) {
+function CardRoot({ children, ...props }: CardRootProps): JSX.Element {
   return (
-    <div {...props} className={`card ${props.className && props.className}`}>
-      {children && children}
+    <div {...props} className={`card ${(props.className != null) ? props.className : "" }`}>
+      {children !== null && children}
     </div>
   );
 }
@@ -23,84 +23,77 @@ export interface CardTitleProps extends HtmlHTMLAttributes<HTMLHeadingElement> {
 /**
  * Card Title
  */
-function Title({ children, as = "h1", ...props }: CardTitleProps) {
+function Title({ children, as = "h1", ...props }: CardTitleProps): JSX.Element {
   switch (as) {
     case "h1":
       return (
         <h1
           {...props}
-          className={`card--title ${props.className && props.className}`}
+          className={`card--title ${(props.className != null) ? props.className : "" }`}
         >
-          {children && children}
+          {children !== null && children}
         </h1>
       );
-      break;
 
     case "h2":
       return (
         <h2
           {...props}
-          className={`card--title ${props.className && props.className}`}
+          className={`card--title ${(props.className != null) ? props.className : "" }`}
         >
-          {children && children}
+          {children !== null && children}
         </h2>
       );
-      break;
 
     case "h3":
       return (
         <h3
           {...props}
-          className={`card--title ${props.className && props.className}`}
+          className={`card--title ${(props.className != null) ? props.className : "" }`}
         >
-          {children && children}
+          {children !== null && children}
         </h3>
       );
-      break;
 
     case "h4":
       return (
         <h4
           {...props}
-          className={`card--title ${props.className && props.className}`}
+          className={`card--title ${(props.className != null) ? props.className : "" }`}
         >
-          {children && children}
+          {children !== null && children}
         </h4>
       );
-      break;
 
     case "h5":
       return (
         <h5
           {...props}
-          className={`card--title ${props.className && props.className}`}
+          className={`card--title ${(props.className != null) ? props.className : "" }`}
         >
-          {children && children}
+          {children !== null && children}
         </h5>
       );
-      break;
 
     case "h6":
       return (
         <h6
           {...props}
-          className={`card--title ${props.className && props.className}`}
+          className={`card--title ${(props.className != null) ? props.className : "" }`}
         >
-          {children && children}
+          {children !== null && children}
         </h6>
       );
-      break;
 
     default:
       return (
         <h1
           {...props}
-          className={`card--title ${props.className && props.className}`}
+          className={`card--title ${(props.className != null) ? props.className : "" }`}
         >
-          {children && children}
+          {children !== null && children}
         </h1>
       );
-      break;
   }
 }
 
@@ -109,15 +102,15 @@ export interface CardBodyProps extends HtmlHTMLAttributes<HTMLDivElement> {}
 /**
  * Card Body
  */
-function Body({ children, ...props }: CardBodyProps) {
+function Body({ children, ...props }: CardBodyProps): JSX.Element {
   return (
     <div
       {...props}
-      className={`card--body ${props.className && props.className}`}
+      className={`card--body ${(props.className != null) ? props.className : "" }`}
     >
       {children}
     </div>
   );
 }
 
-export let Card = Object.assign(CardRoot, { Title, Body });
+export const Card = Object.assign(CardRoot, { Title, Body });
