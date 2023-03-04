@@ -24,7 +24,10 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "publishToNPM": "tsc && npm publish"
+    "publishToNPM": "tsc && npm publish",
+    "lint": "eslint ./src",
+    "prettier:format": "prettier --write ./src",
+    "prettier:check": "prettier --check ./src"
   },
   "publishConfig": {
     "access": "public"
@@ -38,6 +41,7 @@
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@vitejs/plugin-react": "^3.1.0",
     "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.6.0",
     "eslint-config-standard-with-typescript": "^34.0.0",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-n": "^15.0.0",
