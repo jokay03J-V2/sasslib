@@ -10,7 +10,7 @@ env:
   NODE_VERSION: 16
 
 jobs:
-  build:
+  build_publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -37,6 +37,6 @@ jobs:
           path: ./build
 
       - name: Publish
-        run: npm run publishToNPM
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
