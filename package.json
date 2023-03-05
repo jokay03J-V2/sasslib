@@ -24,7 +24,8 @@
     "dev:host": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
-    "sass:build": "sass sasslib/style.scss build/style.css & minify build/style.css > build/style.min.css"
+    "sass:build": "sass sasslib/style.scss build/style.css",
+    "sass:minify": "minify build/style.css > build/style.min.css"
   },
   "devDependencies": {
     "minify": "^9.2.0",
