@@ -1,8 +1,5 @@
 name: publish package
 
-branding:
-  icon: 'package'
-
 on:
   release:
     types:
