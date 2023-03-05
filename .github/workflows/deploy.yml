@@ -25,37 +25,7 @@ jobs:
         run: npm ci
 
       - name: Run build
-        run: npm run sass:build
-
-      - name: Minify build
-        run: npm run sass:minify
-
-      - name: Upload production-ready build files
-        uses: actions/upload-artifact@v2
-        with:
-          name: production-files
-          path: ./build
-
-  publishToNPM:
-    needs: [build]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Use Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          registry-url: "https://registry.npmjs.org"
-
-      - name: setup build folder
-        run: mkdir build
-
-      - name: Download artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: production-files
-          path: ./build
+        run: ./deploy.sh
 
       - name: Publish
         run: npm publish
