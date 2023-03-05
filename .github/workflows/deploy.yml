@@ -27,6 +27,9 @@ jobs:
       - name: Run build
         run: npm run sass:build
 
+      - name: Minify build
+        run: npm run sass:minify
+
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v2
         with:
