@@ -36,12 +36,6 @@ jobs:
           name: production-files
           path: ./build
 
-  publish_package:
-    needs: [build]
-    if: ${{ !failure() }}
-    runs-on: ubuntu-latest
-    steps:
-
       - name: Publish
         run: npm run publishToNPM
         env:
