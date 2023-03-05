@@ -36,11 +36,6 @@ jobs:
           name: production-files
           path: ./build
 
-      - name: Publish
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
   publishToNPM:
     needs: [build]
     runs-on: ubuntu-latest
