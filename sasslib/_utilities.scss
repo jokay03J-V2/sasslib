@@ -12,11 +12,11 @@
     @each $keyBreakpoints, $valueBreakpoints in $breakpoints {
       @media screen and (min-width: $valueBreakpoints) {
         .#{$keyBreakpoints}--h--#{$i}-#{$max-view} {
-          height: $min-pourcentage * $i;
+          height: $min-pourcentage * $i !important;
         }
 
         .#{$keyBreakpoints}--w--#{$i}-#{$max-view} {
-          width: $min-pourcentage * $i;
+          width: $min-pourcentage * $i !important;
         }
       }
     }
@@ -244,7 +244,7 @@
 
   @each $keyBreakpoints, $valueBreakpoints in $breakpoints {
     .#{$keyBreakpoints}--rounded--#{$borderRadiusKey} {
-      border-radius: $borderRadiusValue;
+      border-radius: $borderRadiusValue !important;
     }
   }
 }
@@ -258,7 +258,7 @@
   @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
     @media screen and (min-width: $valueBreakpoint) {
       .#{$keyBreakpoints}--border--#{$borderStyleValue} {
-        border-style: $borderStyleValue;
+        border-style: $borderStyleValue !important;
       }
     }
   }
@@ -273,7 +273,7 @@
   @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
     @media screen and (min-width: $valueBreakpoint) {
       .#{$keyBreakpoints}--d--#{$val} {
-        display: $val;
+        display: $val !important;
       }
     }
   }
@@ -288,7 +288,7 @@
   @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
     @media screen and (min-width: $valueBreakpoint) {
       .#{$keyBreakpoints}--items--#{$val} {
-        align-items: $val;
+        align-items: $val !important;
       }
     }
   }
