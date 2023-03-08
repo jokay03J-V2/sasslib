@@ -96,12 +96,12 @@
 
     .text--hover--#{$key}--dark--#{$i} {
       &:hover {
-        color: mix(white, $val, $i * 10%);
+        color: mix(black, $val, $i * 10%);
       }
     }
 
     .border--#{$key}--dark--#{$i} {
-      border-color: mix(white, $val, $i * 10%);
+      border-color: mix(black, $val, $i * 10%);
     }
 
     //breakpoints
@@ -118,12 +118,12 @@
 
         .#{$keyBreakpoints}--text--hover--#{$key}--dark--#{$i} {
           &:hover {
-            color: mix(white, $val, $i * 10%) !important;
+            color: mix(black, $val, $i * 10%) !important;
           }
         }
 
         .#{$keyBreakpoints}--border--#{$key}--dark--#{$i} {
-          border-color: mix(white, $val, $i * 10%) !important;
+          border-color: mix(black, $val, $i * 10%) !important;
         }
       }
     }
