@@ -29,7 +29,7 @@
 //max view 12
 @include generateRelativeView(12);
 
-@for $i from 0 through 100 {
+@for $i from 100 through 0 {
   //margins
   //margin
   .m--#{$i} {
@@ -436,7 +436,6 @@
       .#{$keyBreakpoints}--first--letter--transform--#{$keyTransform} {
         &::first-letter {
           text-transform: $keyTransform !important;
-
         }
       }
     }
@@ -468,6 +467,36 @@
     @media screen and (min-width: $valueBreakpoint) {
       .#{$keyBreakpoints}--position--#{$keyPosition} {
         position: $keyPosition !important;
+      }
+    }
+  }
+}
+
+//cursors
+@each $keyCursor in $cursors {
+  .cursor--#{$keyCursor} {
+    cursor: $keyCursor;
+  }
+
+  @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
+    @media screen and (min-width: $valueBreakpoint) {
+      .#{$keyBreakpoints}--cursor--#{$keyCursor} {
+        cursor: $keyCursor !important;
+      }
+    }
+  }
+}
+
+//overflows
+@each $keyOverflow in $overflows {
+  .overflow--#{$keyOverflow} {
+    overflow: $keyOverflow;
+  }
+
+  @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
+    @media screen and (min-width: $valueBreakpoint) {
+      .#{$keyBreakpoints}--overflow--#{$keyOverflow} {
+        overflow: $keyOverflow !important;
       }
     }
   }

@@ -111,4 +111,8 @@ $shadows: (
 );
 
 $floats: left, right, none, inline-start, inline-end;
+$cursors: pointer, help, auto, default, none, context-menu, progress, wait, cell,
+  crosshair, text, vertical-text, alias, copy, move, no-drop, grab, grabbing,
+  not-allowed, all-scroll;
+$overflows: hidden, scroll, clip, visible, auto;
 
