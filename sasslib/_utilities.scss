@@ -436,6 +436,7 @@
       .#{$keyBreakpoints}--first--letter--transform--#{$keyTransform} {
         &::first-letter {
           text-transform: $keyTransform !important;
+
         }
       }
     }
