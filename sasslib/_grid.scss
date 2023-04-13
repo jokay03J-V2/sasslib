@@ -1,7 +1,8 @@
 @use "sass:math";
 
 $grid-columns: 12;
-$layout-values: flex-start, flex-end, center, space-between, space-around;
+$layout-values: flex-start, flex-end, end, start, center, space-between,
+  space-around;
 
 // base layout classes
 .container {
@@ -15,13 +16,6 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
 .row {
   display: flex;
   flex-flow: row wrap;
-}
-
-// justify content classes
-@each $val in $layout-values {
-  .justify--#{$val} {
-    justify-content: $val;
-  }
 }
 
 // col classes
@@ -74,3 +68,4 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
     }
   }
 }
+

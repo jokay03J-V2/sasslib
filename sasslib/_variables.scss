@@ -30,6 +30,7 @@ $rounded: (
   "md": 15px,
   "lg": 20px,
   "xl": 25px,
+  "full": 50%,
 );
 
 //font-size
@@ -66,6 +67,13 @@ $displays: flex, grid, none, hidden, block, inline, inline-block;
 //border
 $border-style: solid, none, dotted, inset, dashed, groove, ridge, hidden, outset;
 
+//text
+$text-transform: capitalize, uppercase, lowercase, none;
+$text-align: left, right, center;
+
+//position
+$position: absolute, relative, sticky, static, fixed;
+
 //spacing
 $base-padding: 0.75rem;
 $base-margin: 0.75rem;
@@ -93,3 +101,14 @@ $align-items: center, start, end, baseline, normal;
 
 //gap
 $base-gap: 0.75rem;
+
+$shadows: (
+  "xs": $base-box-shadow,
+  "sm": 1px 3px 5px rgba(0, 0, 0, 0.3),
+  "md": 1px 3px 10px rgba(0, 0, 0, 0.5),
+  "xl": 1px 3px 15px rgba(0, 0, 0, 1),
+  "none": none,
+);
+
+$floats: left, right, none, inline-start, inline-end;
+

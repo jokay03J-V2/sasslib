@@ -1,8 +1,8 @@
-name: publish package
+name: publish unstable package
 
 on:
   release:
-    types: [released]
+    types: [prereleased]
 
 env:
   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -27,7 +27,7 @@ jobs:
         run: ./build.sh
 
       - name: Publish
-        run: npm publish
+        run: npm publish --tag next
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 

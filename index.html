@@ -1,161 +1,162 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="create sass lib" />
-    <title>sass lib</title>
-  </head>
-  <body>
-    <nav class="navbar--red text--white mb-4">
-      <div class="container">
-        <h2 class="site--title">Shinobi CSS</h2>
-        <label class="navbar--mobile--btn" for="navbar--input">Menu</label>
-        <input
-          type="checkbox"
-          name="navbar--input"
-          id="navbar--input"
-          class="navbar--mobile--checked"
-        />
-        <ul class="items">
-          <li class="item">Home</li>
-          <li class="item">Getting Started</li>
-          <li class="item">Components</li>
-        </ul>
-      </div>
-    </nav>
-    <h1 id="font-size" class="row justify--center">this is a h1</h1>
-    <!-- colors -->
-    <h2 id="colors">Colors</h2>
-    <span class="text--primary">primary text</span> |
-    <span class="text--secondary">secondary text</span> |
-    <span class="text--error">error text</span> |
-    <span class="text--info">info text</span> |
-    <span class="text--blue">blue text</span> |
-    <span class="text--red">red text</span> |
-    <span class="text--green">green text</span> |
-    <span class="text--yellow">yellow text</span> |
-    <span class="text--purple">purple text</span> |
-    <span class="text--orange">orange text</span> |
-    <span class="text--gray">gray text</span> |
 
-    <br /><br />
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="create sass lib" />
+  <title>sass lib</title>
+</head>
 
-    <span class="bg--primary text--white">bg primary</span> |
-    <span class="bg--secondary text--white">bg secondary</span> |
-    <span class="bg--error text--white">bg error</span> |
-    <span class="bg--info text--white">bg info</span> |
-    <span class="bg--blue text--white">bg blue</span> |
-    <span class="bg--red text--white">bg red</span> |
-    <span class="bg--green text--white">bg green</span> |
-    <span class="bg--yellow text--white">bg yellow</span> |
-    <span class="bg--purple text--white">bg purple</span> |
-    <span class="bg--orange text--white">bg orange</span> |
-    <span class="bg--gray text--white">bg gray</span> |
-
-    <span class="bg--primary--dark--8 text--white">primary dark 8</span> |
-    <span class="bg--primary--dark--6 text--white">primary dark 6</span> |
-    <span class="bg--primary--dark--4 text--white">primary dark 4</span> |
-    <span class="bg--primary--dark--2 text--white">primary dark 2</span> |
-    <span class="bg--primary text--white">primary</span> |
-    <span class="bg--primary--light--2 text--white">primary light 2</span> |
-    <span class="bg--primary--light--4 text--white">primary light 4</span> |
-    <span class="bg--primary--light--6 text--white">primary light 6</span> |
-    <span class="bg--primary--light--8 text--white">primary light 8</span> |
-
-    <br /><br />
-    <a href="#" class="text--primary text--hover--orange--light--1">hover me</a>
-
-    <!-- font sizes -->
-
-    <!-- cards -->
-    <h2 id="card">Cards</h2>
-    <div class="card">
-      <h1 class="card--title">This is a card title</h1>
-      <p class="card--body">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus,
-        rerum. Reiciendis error sunt fugit praesentium
-        <a href="#">quisquam voluptates</a> voluptatibus minus? Exercitationem
-        expedita praesentium ipsam magnam est quis odit officiis, quas dolorem.
-      </p>
+<body>
+  <nav class="navbar--red text--white mb-4">
+    <div class="container">
+      <h2 class="site--title">Shinobi CSS</h2>
+      <label class="navbar--mobile--btn" for="navbar--input">Menu</label>
+      <input type="checkbox" name="navbar--input" id="navbar--input" class="navbar--mobile--checked" />
+      <ul class="items">
+        <li class="item">Home</li>
+        <li class="item">Getting Started</li>
+        <li class="item">Components</li>
+      </ul>
     </div>
+  </nav>
+  <h1 id="font-size" class="row justify--center">this is a h1</h1>
+  <!-- colors -->
+  <h2 id="colors">Colors</h2>
+  <span class="text--primary">primary text</span> |
+  <span class="text--secondary">secondary text</span> |
+  <span class="text--error">error text</span> |
+  <span class="text--info">info text</span> |
+  <span class="text--blue">blue text</span> |
+  <span class="text--red">red text</span> |
+  <span class="text--green">green text</span> |
+  <span class="text--yellow">yellow text</span> |
+  <span class="text--purple">purple text</span> |
+  <span class="text--orange">orange text</span> |
+  <span class="text--gray">gray text</span> |
 
-    <!-- button -->
-    <a href="#" class="btn">default btn</a>
-    <a href="#" class="btn--primary text-white">click me</a>
-    <a href="#" class="btn--secondary text-white">click me</a>
-    <a href="#" class="btn--error text-white">click me</a>
-    <a href="#" class="btn--info">click me</a>
-    <a href="#" class="btn--outlined--purple text--purple text--hover--white"
-      >click me</a
-    >
-    <a href="#" class="btn--outlined--orange text--orange text--hover--white"
-      >click me</a
-    >
-    <!-- grid system -->
-    <!-- grid system -->
-    <h2 class="mb-2">Grid System</h2>
-    <div class="row gap--2 justify--center">
-      <div class="col--12--xs col--5--sm col--3--xl">
-        <div class="card">
-          <h3 class="card--title">Hello, ninjas</h3>
-          <p class="card--body">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          </p>
-        </div>
-      </div>
-      <div class="col--12--xs col--5--sm col--3--xl">
-        <div class="card">
-          <h3 class="card--title">Hello, ninjas</h3>
-          <p class="card--body">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          </p>
-        </div>
-      </div>
-      <div class="col--12--xs col--5--sm col--3--xl">
-        <div class="card">
-          <h3 class="card--title">Hello, ninjas</h3>
-          <p class="card--body">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          </p>
-        </div>
-      </div>
-      <div class="col--12--xs col--5--sm col--3--xl">
-        <div class="card">
-          <h3 class="card--title">Hello, ninjas</h3>
-          <p class="card--body">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          </p>
-        </div>
+  <br /><br />
+
+  <span class="bg--primary text--white">bg primary</span> |
+  <span class="bg--secondary text--white">bg secondary</span> |
+  <span class="bg--error text--white">bg error</span> |
+  <span class="bg--info text--white">bg info</span> |
+  <span class="bg--blue text--white">bg blue</span> |
+  <span class="bg--red text--white">bg red</span> |
+  <span class="bg--green text--white">bg green</span> |
+  <span class="bg--yellow text--white">bg yellow</span> |
+  <span class="bg--purple text--white">bg purple</span> |
+  <span class="bg--orange text--white">bg orange</span> |
+  <span class="bg--gray text--white">bg gray</span> |
+
+  <span class="bg--primary--dark--8 text--white">primary dark 8</span> |
+  <span class="bg--primary--dark--6 text--white">primary dark 6</span> |
+  <span class="bg--primary--dark--4 text--white">primary dark 4</span> |
+  <span class="bg--primary--dark--2 text--white">primary dark 2</span> |
+  <span class="bg--primary text--white">primary</span> |
+  <span class="bg--primary--light--2 text--white">primary light 2</span> |
+  <span class="bg--primary--light--4 text--white">primary light 4</span> |
+  <span class="bg--primary--light--6 text--white">primary light 6</span> |
+  <span class="bg--primary--light--8 text--white">primary light 8</span> |
+
+  <br /><br />
+  <a href="#" class="text--primary text--hover--orange--light--1">hover me</a>
+
+  <!-- font sizes -->
+
+  <!-- cards -->
+  <h2 id="card">Cards</h2>
+  <div class="card">
+    <h1 class="card--title">This is a card title</h1>
+    <p class="card--body">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus,
+      rerum. Reiciendis error sunt fugit praesentium
+      <a href="#">quisquam voluptates</a> voluptatibus minus? Exercitationem
+      expedita praesentium ipsam magnam est quis odit officiis, quas dolorem.
+    </p>
+  </div>
+
+  <!-- button -->
+  <a href="#" class="btn">default btn</a>
+  <a href="#" class="btn--primary text-white">click me</a>
+  <a href="#" class="btn--secondary text-white">click me</a>
+  <a href="#" class="btn--error text-white">click me</a>
+  <a href="#" class="btn--info">click me</a>
+  <a href="#" class="btn--outlined--purple text--purple text--hover--white">click me</a>
+  <a href="#" class="btn--outlined--orange text--orange text--hover--white">click me</a>
+  <!-- grid system -->
+  <!-- grid system -->
+  <h2 class="mb-2">Grid System</h2>
+  <div class="row gap--2 justify--center">
+    <div class="col--12--xs col--5--sm col--3--xl">
+      <div class="card">
+        <h3 class="card--title">Hello, ninjas</h3>
+        <p class="card--body">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
       </div>
     </div>
-    <!-- utilities -->
-    <h1>relative height & width</h1>
-    <div class="w--6-12 h--6-12 bg--orange--light--1 pl--3">
-      <h1>1 => 6</h1>
-      <pre><code>w--[view]-[max-view]</code></pre>
-      <pre><code>w--3-6</code></pre>
-      <h1>1=>12</h1>
-      <pre><code>w--[view]-[max-view]</code></pre>
-      <pre><code>w--6-12</code></pre>
+    <div class="col--12--xs col--5--sm col--3--xl">
+      <div class="card">
+        <h3 class="card--title">Hello, ninjas</h3>
+        <p class="card--body">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+      </div>
     </div>
-    <h1>checkbox</h1>
-    <label class="checkbox--orange"
-      >One
-      <input type="checkbox" checked="checked" class="checkbox--input" />
-      <span class="checkbox--mark"></span>
-    </label>
-    <h1>breakpoints</h1>
-    <ul class="d--flex f--direction--column ml--0 sm--ml--1 md--ml--2">
-      <li>xs(0px)</li>
-      <li>md</li>
-      <li>sm</li>
-      <li>lg</li>
-      <li>xl</li>
-    </ul>
-    <h1 class="text--orange lg--text--black">exemples</h1>
+    <div class="col--12--xs col--5--sm col--3--xl">
+      <div class="card">
+        <h3 class="card--title">Hello, ninjas</h3>
+        <p class="card--body">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+      </div>
+    </div>
+    <div class="col--12--xs col--5--sm col--3--xl">
+      <div class="card">
+        <h3 class="card--title">Hello, ninjas</h3>
+        <p class="card--body">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- utilities -->
+  <h1>relative height & width</h1>
+  <div class="w--6-12 h--6-12 bg--orange--light--1 pl--3">
+    <h1>1 => 6</h1>
+    <pre><code>w--[view]-[max-view]</code></pre>
+    <pre><code>w--3-6</code></pre>
+    <h1>1=>12</h1>
+    <pre><code>w--[view]-[max-view]</code></pre>
+    <pre><code>w--6-12</code></pre>
+  </div>
+  <h1>checkbox</h1>
+  <label class="checkbox--orange">One
+    <input type="checkbox" checked="checked" class="checkbox--input" />
+    <span class="checkbox--mark"></span>
+  </label>
+  <h1>breakpoints</h1>
+  <ul class="d--flex f--direction--column ml--0 sm--ml--1 md--ml--2">
+    <li>xs(0px)</li>
+    <li>md</li>
+    <li>sm</li>
+    <li>lg</li>
+    <li>xl</li>
+  </ul>
+  <h1 class="text--orange lg--text--black">exemples</h1>
+  <div class="w--6-6">
+    <p class="align--center">center</p>
+    <p class="align--left">left</p>
+    <p class="align--right">right</p>
+  </div>
 
-    <script src="./main.js" type="module"></script>
-  </body>
+  <div class="h--1 w--1 bg--black position--absolute left--10"></div>
+  <p class="float--left">float left</p>
+  <p class="float--right">float right</p>
+  <script src="./main.js" type="module"></script>
+</body>
+
 </html>
