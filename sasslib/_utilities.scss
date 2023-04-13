@@ -400,15 +400,15 @@
 }
 
 //floats
-@each $keyFloats, $val in $floats {
-  .shadow--#{$keyFloats} {
-    float: $val;
+@each $keyFloat in $floats {
+  .float--#{$keyFloat} {
+    float: $keyFloat;
   }
 
   @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
     @media screen and (min-width: $valueBreakpoint) {
-      .#{$keyBreakpoints}--shadow--#{$keyFloats} {
-        float: $val !important;
+      .#{$keyBreakpoints}--float--#{$keyFloat} {
+        float: $keyFloat !important;
       }
     }
   }
