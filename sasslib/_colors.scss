@@ -13,6 +13,12 @@
     }
   }
 
+  .bg--hover--#{$key} {
+    &:hover {
+      background-color: $val;
+    }
+  }
+
   .border--#{$key} {
     border-color: $val;
   }
@@ -30,6 +36,12 @@
       .#{$keyBreakpoints}--text--hover--#{$key} {
         &:hover {
           color: $val !important;
+        }
+      }
+
+      .#{$keyBreakpoints}--bg--hover--#{$key} {
+        &:hover {
+          background-color: $val !important;
         }
       }
 
@@ -55,6 +67,12 @@
       }
     }
 
+    .bg--hover--#{$key}--light--#{$i} {
+      &:hover {
+        background-color: mix(white, $val, $i * 10%);
+      }
+    }
+
     .border--#{$key}--light--#{$i} {
       border-color: mix(white, $val, $i * 10%);
     }
@@ -74,6 +92,12 @@
         .#{$keyBreakpoints}--text--hover--#{$key}--light--#{$i} {
           &:hover {
             color: mix(white, $val, $i * 10%) !important;
+          }
+        }
+
+        .#{$keyBreakpoints}--bg--hover--#{$key}--light--#{$i} {
+          &:hover {
+            background-color: mix(white, $val, $i * 10%) !important;
           }
         }
 
@@ -100,6 +124,12 @@
       }
     }
 
+    .bg--hover--#{$key}--dark--#{$i} {
+      &:hover {
+        background-color: mix(black, $val, $i * 10%);
+      }
+    }
+
     .border--#{$key}--dark--#{$i} {
       border-color: mix(black, $val, $i * 10%);
     }
@@ -119,6 +149,12 @@
         .#{$keyBreakpoints}--text--hover--#{$key}--dark--#{$i} {
           &:hover {
             color: mix(black, $val, $i * 10%) !important;
+          }
+        }
+
+        .#{$keyBreakpoints}--bg--hover--#{$key}--dark--#{$i} {
+          &:hover {
+            background-color: mix(black, $val, $i * 10%) !important;
           }
         }
 
@@ -143,3 +179,4 @@
     }
   }
 }
+
