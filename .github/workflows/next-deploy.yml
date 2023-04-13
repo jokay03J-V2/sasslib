@@ -1,8 +1,9 @@
 name: publish unstable package
 
 on:
-  branch:
-    - develop
+  push:
+    branches:
+      - develop
 
 env:
   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
