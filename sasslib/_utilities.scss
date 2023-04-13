@@ -29,7 +29,7 @@
 //max view 12
 @include generateRelativeView(12);
 
-@for $i from 0 through 99 {
+@for $i from 0 through 100 {
   //margins
   //margin
   .m--#{$i} {
@@ -129,6 +129,13 @@
     gap: $base-gap * $i;
   }
 
+  .top--#{$i} {
+    top: $i "%";
+  }
+
+  .left--#{$i} {
+    left: $i "%";
+  }
   //breakpoints utilities
 
   @each $keyBreakpoints, $valueBreakpoints in $breakpoints {
@@ -231,6 +238,14 @@
       .#{$keyBreakpoints}--gap--#{$i} {
         gap: $base-gap * $i !important;
       }
+
+      .#{$keyBreakpoints}--top--#{$i} {
+        top: $i "%" !important;
+      }
+
+      .#{$keyBreakpoints}--left--#{$i} {
+        left: $i "%" !important;
+      }
     }
   }
 }
@@ -289,6 +304,21 @@
     @media screen and (min-width: $valueBreakpoint) {
       .#{$keyBreakpoints}--items--#{$val} {
         align-items: $val !important;
+      }
+    }
+  }
+}
+
+// justify content classes
+@each $val in $layout-values {
+  .justify--#{$val} {
+    justify-content: $val;
+  }
+
+  @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
+    @media screen and (min-width: $valueBreakpoint) {
+      .#{$keyBreakpoints}--justify--#{$val} {
+        justify-content: $val !important;
       }
     }
   }
@@ -353,3 +383,92 @@
     }
   }
 }
+
+//shadows
+@each $keyShadows, $val in $shadows {
+  .shadow--#{$keyShadows} {
+    box-shadow: $val;
+  }
+
+  @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
+    @media screen and (min-width: $valueBreakpoint) {
+      .#{$keyBreakpoints}--shadow--#{$keyShadows} {
+        box-shadow: $val !important;
+      }
+    }
+  }
+}
+
+//floats
+@each $keyFloats, $val in $floats {
+  .shadow--#{$keyFloats} {
+    float: $val;
+  }
+
+  @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
+    @media screen and (min-width: $valueBreakpoint) {
+      .#{$keyBreakpoints}--shadow--#{$keyFloats} {
+        float: $val !important;
+      }
+    }
+  }
+}
+
+//texts
+//text transform
+@each $keyPosition, $val in $text-transform {
+  .transform--#{$val} {
+    text-transform: $val;
+  }
+
+  .first--letter--transform--#{$val} {
+    &::first-letter {
+      text-transform: $val;
+    }
+  }
+
+  @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
+    @media screen and (min-width: $valueBreakpoint) {
+      .#{$keyBreakpoints}--transform--#{$val} {
+        text-transform: $val !important;
+      }
+
+      .#{$keyBreakpoints}--first--letter--transform--#{$val} {
+        &::first-letter {
+          text-transform: $val !important;
+        }
+      }
+    }
+  }
+}
+
+//text align
+@each $keyAlign in $text-align {
+  .align--#{$keyAlign} {
+    text-align: $keyAlign;
+  }
+
+  @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
+    @media screen and (min-width: $valueBreakpoint) {
+      .#{$keyBreakpoints}--align--#{$keyAlign} {
+        text-align: $keyAlign !important;
+      }
+    }
+  }
+}
+
+//position
+@each $keyPosition in $position {
+  .position--#{$keyPosition} {
+    position: $keyPosition;
+  }
+
+  @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
+    @media screen and (min-width: $valueBreakpoint) {
+      .#{$keyBreakpoints}--position--#{$keyPosition} {
+        position: $keyPosition !important;
+      }
+    }
+  }
+}
+
