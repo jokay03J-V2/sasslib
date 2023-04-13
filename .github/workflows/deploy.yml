@@ -2,8 +2,7 @@ name: publish package
 
 on:
   release:
-    types:
-      - published
+    types: [released]
 
 env:
   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -31,3 +30,4 @@ jobs:
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
