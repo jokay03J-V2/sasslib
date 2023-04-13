@@ -130,14 +130,14 @@
   }
 
   .top--#{$i} {
-    top: $i "%";
+    top: $i * 1%;
   }
 
   .left--#{$i} {
-    left: $i "%";
+    left: $i * 1%;
   }
-  //breakpoints utilities
 
+  //breakpoints utilities
   @each $keyBreakpoints, $valueBreakpoints in $breakpoints {
     @media screen and (min-width: $valueBreakpoints) {
       //margins
@@ -240,11 +240,11 @@
       }
 
       .#{$keyBreakpoints}--top--#{$i} {
-        top: $i "%" !important;
+        top: $i * 1% !important;
       }
 
       .#{$keyBreakpoints}--left--#{$i} {
-        left: $i "%" !important;
+        left: $i * 1% !important;
       }
     }
   }
