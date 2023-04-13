@@ -416,26 +416,27 @@
 
 //texts
 //text transform
-@each $keyPosition, $val in $text-transform {
-  .transform--#{$val} {
-    text-transform: $val;
+@each $keyTransform in $text-transform {
+  .transform--#{$keyTransform} {
+    text-transform: $keyTransform;
   }
 
-  .first--letter--transform--#{$val} {
+  .first--letter--transform--#{$keyTransform} {
     &::first-letter {
-      text-transform: $val;
+      text-transform: $keyTransform;
     }
   }
 
   @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
     @media screen and (min-width: $valueBreakpoint) {
-      .#{$keyBreakpoints}--transform--#{$val} {
-        text-transform: $val !important;
+      .#{$keyBreakpoints}--transform--#{$keyTransform} {
+        text-transform: $keyTransform !important;
       }
 
-      .#{$keyBreakpoints}--first--letter--transform--#{$val} {
+      .#{$keyBreakpoints}--first--letter--transform--#{$keyTransform} {
         &::first-letter {
-          text-transform: $val !important;
+          text-transform: $keyTransform !important;
+
         }
       }
     }
