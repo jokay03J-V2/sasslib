@@ -1,144 +1,153 @@
-@each $key, $val in $colors {
-  .text--#{$key} {
-    color: $val;
-  }
+@import "functions";
+@import "variables";
+@import "breakpoints";
 
-  .bg--#{$key} {
-    background-color: $val;
-  }
-
-  .text--hover--#{$key} {
-    &:hover {
+@layer colors {
+  @each $key, $val in $colors {
+    .text--#{$key} {
       color: $val;
     }
-  }
 
-  .border--#{$key} {
-    border-color: $val;
-  }
+    .bg--#{$key} {
+      background-color: $val;
+    }
 
-  @each $keyBreakpoints, $valueBreakpoints in $breakpoints {
-    @media screen and (min-width: $valueBreakpoints) {
-      .#{$keyBreakpoints}--text--#{$key} {
-        color: $val !important;
+    .text--hover--#{$key} {
+      &:hover {
+        color: $val;
       }
+    }
 
-      .#{$keyBreakpoints}--bg--#{$key} {
-        background-color: $val !important;
-      }
+    .border--#{$key} {
+      border-color: $val;
+    }
 
-      .#{$keyBreakpoints}--text--hover--#{$key} {
-        &:hover {
-          color: $val !important;
+    .text--decoration--#{$key} {
+      text-decoration-color: $val;
+    }
+
+    @each $keyBreakpoints, $valueBreakpoints in $breakpoints {
+      @media screen and (min-width: $valueBreakpoints) {
+        .#{$keyBreakpoints}--text--#{$key} {
+          color: $val;
+        }
+
+        .#{$keyBreakpoints}--bg--#{$key} {
+          background-color: $val;
+        }
+
+        .#{$keyBreakpoints}--text--hover--#{$key} {
+          &:hover {
+            color: $val;
+          }
+        }
+
+        .#{$keyBreakpoints}--border--#{$key} {
+          border-color: $val;
         }
       }
-
-      .#{$keyBreakpoints}--border--#{$key} {
-        border-color: $val !important;
-      }
-    }
-  }
-
-  //light variation
-  @for $i from 1 through 9 {
-    .text--#{$key}--light--#{$i} {
-      color: mix(white, $val, $i * 10%);
     }
 
-    .bg--#{$key}--light--#{$i} {
-      background-color: mix(white, $val, $i * 10%);
-    }
-
-    .text--hover--#{$key}--light--#{$i} {
-      &:hover {
+    //light variation
+    @for $i from 1 through 9 {
+      .text--#{$key}--light--#{$i} {
         color: mix(white, $val, $i * 10%);
       }
-    }
 
-    .border--#{$key}--light--#{$i} {
-      border-color: mix(white, $val, $i * 10%);
-    }
+      .bg--#{$key}--light--#{$i} {
+        background-color: mix(white, $val, $i * 10%);
+      }
 
-    //breakpoints
-
-    @each $keyBreakpoints, $valueBreakpoints in $breakpoints {
-      @media screen and (min-width: $valueBreakpoints) {
-        .#{$keyBreakpoints}--text--#{$key}--light--#{$i} {
-          color: mix(white, $val, $i * 10%) !important;
+      .text--hover--#{$key}--light--#{$i} {
+        &:hover {
+          color: mix(white, $val, $i * 10%);
         }
+      }
 
-        .#{$keyBreakpoints}--bg--#{$key}--light--#{$i} {
-          background-color: mix(white, $val, $i * 10%) !important;
-        }
+      .border--#{$key}--light--#{$i} {
+        border-color: mix(white, $val, $i * 10%);
+      }
 
-        .#{$keyBreakpoints}--text--hover--#{$key}--light--#{$i} {
-          &:hover {
-            color: mix(white, $val, $i * 10%) !important;
+      //breakpoints
+      @each $keyBreakpoints, $valueBreakpoints in $breakpoints {
+        @media screen and (min-width: $valueBreakpoints) {
+          .#{$keyBreakpoints}--text--#{$key}--light--#{$i} {
+            color: mix(white, $val, $i * 10%);
           }
-        }
 
-        .#{$keyBreakpoints}--border--#{$key}--light--#{$i} {
-          border-color: mix(white, $val, $i * 10%) !important;
+          .#{$keyBreakpoints}--bg--#{$key}--light--#{$i} {
+            background-color: mix(white, $val, $i * 10%);
+          }
+
+          .#{$keyBreakpoints}--text--hover--#{$key}--light--#{$i} {
+            &:hover {
+              color: mix(white, $val, $i * 10%);
+            }
+          }
+
+          .#{$keyBreakpoints}--border--#{$key}--light--#{$i} {
+            border-color: mix(white, $val, $i * 10%);
+          }
         }
       }
     }
-  }
 
-  //dark variation
-  @for $i from 1 through 9 {
-    .text--#{$key}--dark--#{$i} {
-      color: mix(black, $val, $i * 10%);
-    }
-
-    .bg--#{$key}--dark--#{$i} {
-      background-color: mix(black, $val, $i * 10%);
-    }
-
-    .text--hover--#{$key}--dark--#{$i} {
-      &:hover {
+    //dark variation
+    @for $i from 1 through 9 {
+      .text--#{$key}--dark--#{$i} {
         color: mix(black, $val, $i * 10%);
       }
-    }
 
-    .border--#{$key}--dark--#{$i} {
-      border-color: mix(black, $val, $i * 10%);
-    }
+      .bg--#{$key}--dark--#{$i} {
+        background-color: mix(black, $val, $i * 10%);
+      }
 
-    //breakpoints
-
-    @each $keyBreakpoints, $valueBreakpoints in $breakpoints {
-      @media screen and (min-width: $valueBreakpoints) {
-        .#{$keyBreakpoints}--text--#{$key}--dark--#{$i} {
-          color: mix(black, $val, $i * 10%) !important;
+      .text--hover--#{$key}--dark--#{$i} {
+        &:hover {
+          color: mix(black, $val, $i * 10%);
         }
+      }
 
-        .#{$keyBreakpoints}--bg--#{$key}--dark--#{$i} {
-          background-color: mix(black, $val, $i * 10%) !important;
-        }
+      .border--#{$key}--dark--#{$i} {
+        border-color: mix(black, $val, $i * 10%);
+      }
 
-        .#{$keyBreakpoints}--text--hover--#{$key}--dark--#{$i} {
-          &:hover {
-            color: mix(black, $val, $i * 10%) !important;
+      //breakpoints
+
+      @each $keyBreakpoints, $valueBreakpoints in $breakpoints {
+        @media screen and (min-width: $valueBreakpoints) {
+          .#{$keyBreakpoints}--text--#{$key}--dark--#{$i} {
+            color: mix(black, $val, $i * 10%);
           }
-        }
 
-        .#{$keyBreakpoints}--border--#{$key}--dark--#{$i} {
-          border-color: mix(black, $val, $i * 10%) !important;
+          .#{$keyBreakpoints}--bg--#{$key}--dark--#{$i} {
+            background-color: mix(black, $val, $i * 10%);
+          }
+
+          .#{$keyBreakpoints}--text--hover--#{$key}--dark--#{$i} {
+            &:hover {
+              color: mix(black, $val, $i * 10%);
+            }
+          }
+
+          .#{$keyBreakpoints}--border--#{$key}--dark--#{$i} {
+            border-color: mix(black, $val, $i * 10%);
+          }
         }
       }
     }
   }
-}
 
-@for $i from 1 through 99 {
-  .border--#{$i} {
-    border-width: $base-border-thickness * $i;
-  }
+  @for $i from 1 through 99 {
+    .border--#{$i} {
+      border-width: $base-border-thickness * $i;
+    }
 
-  @each $keyBreakpoints, $valueBreakpoints in $breakpoints {
-    @media screen and (min-width: $valueBreakpoints) {
-      .#{$keyBreakpoints}--border--#{$i} {
-        border-width: $base-border-thickness * $i !important;
+    @each $keyBreakpoints, $valueBreakpoints in $breakpoints {
+      @media screen and (min-width: $valueBreakpoints) {
+        .#{$keyBreakpoints}--border--#{$i} {
+          border-width: $base-border-thickness * $i;
+        }
       }
     }
   }
