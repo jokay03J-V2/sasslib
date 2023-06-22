@@ -1,3 +1,7 @@
+@import "functions";
+@import "variables";
+@import "breakpoints";
+
 @mixin generateRelativeView($max-view: 6) {
   $min-pourcentage: calc(100% / $max-view);
   @for $i from 1 through $max-view {
@@ -12,11 +16,11 @@
     @each $keyBreakpoints, $valueBreakpoints in $breakpoints {
       @media screen and (min-width: $valueBreakpoints) {
         .#{$keyBreakpoints}--h--#{$i}-#{$max-view} {
-          height: $min-pourcentage * $i !important;
+          height: $min-pourcentage * $i;
         }
 
         .#{$keyBreakpoints}--w--#{$i}-#{$max-view} {
-          width: $min-pourcentage * $i !important;
+          width: $min-pourcentage * $i;
         }
       }
     }
@@ -143,108 +147,108 @@
       //margins
       //margin
       .#{$keyBreakpoints}--m--#{$i} {
-        margin: ($base-margin * $i) !important;
+        margin: ($base-margin * $i);
       }
 
       //margin-left
       .#{$keyBreakpoints}--ml--#{$i} {
-        margin-left: ($base-margin * $i) !important;
+        margin-left: ($base-margin * $i);
       }
 
       //margin--right
       .#{$keyBreakpoints}--mr--#{$i} {
-        margin-right: ($base-margin * $i) !important;
+        margin-right: ($base-margin * $i);
       }
 
       //margin-left & margin-right
       .#{$keyBreakpoints}--mx--#{$i} {
-        margin-right: ($base-margin * $i) !important;
-        margin-left: ($base-margin * $i) !important;
+        margin-right: ($base-margin * $i);
+        margin-left: ($base-margin * $i);
       }
 
       //margin--top
       .#{$keyBreakpoints}--mt--#{$i} {
-        margin-top: ($base-margin * $i) !important;
+        margin-top: ($base-margin * $i);
       }
 
       //margin-bottom
       .#{$keyBreakpoints}--mb--#{$i} {
-        margin-bottom: ($base-margin * $i) !important;
+        margin-bottom: ($base-margin * $i);
       }
 
       //margin-top & margin-bottom
       .#{$keyBreakpoints}--my--#{$i} {
-        margin-top: ($base-margin * $i) !important;
-        margin-bottom: ($base-margin * $i) !important;
+        margin-top: ($base-margin * $i);
+        margin-bottom: ($base-margin * $i);
       }
 
       //paddings
       .#{$keyBreakpoints}--p--#{$i} {
-        padding: $base-padding * $i !important;
+        padding: $base-padding * $i;
       }
 
       //padding-left
       .#{$keyBreakpoints}--pl--#{$i} {
-        padding-left: $base-padding * $i !important;
+        padding-left: $base-padding * $i;
       }
 
       //padding-right
       .#{$keyBreakpoints}--pr--#{$i} {
-        padding-right: $base-padding * $i !important;
+        padding-right: $base-padding * $i;
       }
 
       //padding-right & padding-left
       .#{$keyBreakpoints}--px--#{$i} {
-        padding-right: $base-padding * $i !important;
-        padding-left: $base-padding * $i !important;
+        padding-right: $base-padding * $i;
+        padding-left: $base-padding * $i;
       }
 
       //padding top
       .#{$keyBreakpoints}--pt--#{$i} {
-        padding-top: $base-padding * $i !important;
+        padding-top: $base-padding * $i;
       }
 
       //padding bottom
       .#{$keyBreakpoints}--pb--#{$i} {
-        padding-bottom: $base-padding * $i !important;
+        padding-bottom: $base-padding * $i;
       }
 
       //padding-bottom & padding-top
       .#{$keyBreakpoints}--py--#{$i} {
-        padding-top: $base-padding * $i !important;
-        padding-bottom: $base-padding * $i !important;
+        padding-top: $base-padding * $i;
+        padding-bottom: $base-padding * $i;
       }
 
       //height
       .#{$keyBreakpoints}--h--#{$i} {
-        height: $base-height * $i !important;
+        height: $base-height * $i;
       }
 
       //min-height
       .#{$keyBreakpoints}--min--h--#{$i} {
-        min-height: $base-height * $i !important;
+        min-height: $base-height * $i;
       }
 
       //min-width
       .#{$keyBreakpoints}--min--w--#{$i} {
-        min-width: $base-width * $i !important;
+        min-width: $base-width * $i;
       }
 
       //width
       .#{$keyBreakpoints}--w--#{$i} {
-        width: $base-width * $i !important;
+        width: $base-width * $i;
       }
 
       .#{$keyBreakpoints}--gap--#{$i} {
-        gap: $base-gap * $i !important;
+        gap: $base-gap * $i;
       }
 
       .#{$keyBreakpoints}--top--#{$i} {
-        top: $i * 1% !important;
+        top: $i * 1%;
       }
 
       .#{$keyBreakpoints}--left--#{$i} {
-        left: $i * 1% !important;
+        left: $i * 1%;
       }
     }
   }
@@ -259,7 +263,7 @@
 
   @each $keyBreakpoints, $valueBreakpoints in $breakpoints {
     .#{$keyBreakpoints}--rounded--#{$borderRadiusKey} {
-      border-radius: $borderRadiusValue !important;
+      border-radius: $borderRadiusValue;
     }
   }
 }
@@ -273,7 +277,7 @@
   @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
     @media screen and (min-width: $valueBreakpoint) {
       .#{$keyBreakpoints}--border--#{$borderStyleValue} {
-        border-style: $borderStyleValue !important;
+        border-style: $borderStyleValue;
       }
     }
   }
@@ -288,7 +292,7 @@
   @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
     @media screen and (min-width: $valueBreakpoint) {
       .#{$keyBreakpoints}--d--#{$val} {
-        display: $val !important;
+        display: $val;
       }
     }
   }
@@ -303,7 +307,7 @@
   @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
     @media screen and (min-width: $valueBreakpoint) {
       .#{$keyBreakpoints}--items--#{$val} {
-        align-items: $val !important;
+        align-items: $val;
       }
     }
   }
@@ -318,7 +322,7 @@
   @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
     @media screen and (min-width: $valueBreakpoint) {
       .#{$keyBreakpoints}--justify--#{$val} {
-        justify-content: $val !important;
+        justify-content: $val;
       }
     }
   }
@@ -333,7 +337,7 @@
   @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
     @media screen and (min-width: $valueBreakpoint) {
       .#{$keyBreakpoints}--text--#{$keyFont} {
-        font-size: $base-font-size * $val !important;
+        font-size: $base-font-size * $val;
       }
     }
   }
@@ -348,7 +352,7 @@
   @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
     @media screen and (min-width: $valueBreakpoint) {
       .#{$keyBreakpoints}--f--direction--#{$val} {
-        flex-direction: $val !important;
+        flex-direction: $val;
       }
     }
   }
@@ -363,7 +367,7 @@
   @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
     @media screen and (min-width: $valueBreakpoint) {
       .#{$keyBreakpoints}--h--#{$keyHeights} {
-        height: $val !important;
+        height: $val;
       }
     }
   }
@@ -378,7 +382,7 @@
   @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
     @media screen and (min-width: $valueBreakpoint) {
       .#{$keyBreakpoints}--w--#{$keyWidths} {
-        width: $val !important;
+        width: $val;
       }
     }
   }
@@ -393,7 +397,7 @@
   @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
     @media screen and (min-width: $valueBreakpoint) {
       .#{$keyBreakpoints}--shadow--#{$keyShadows} {
-        box-shadow: $val !important;
+        box-shadow: $val;
       }
     }
   }
@@ -408,7 +412,7 @@
   @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
     @media screen and (min-width: $valueBreakpoint) {
       .#{$keyBreakpoints}--float--#{$keyFloat} {
-        float: $keyFloat !important;
+        float: $keyFloat;
       }
     }
   }
@@ -430,13 +434,12 @@
   @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
     @media screen and (min-width: $valueBreakpoint) {
       .#{$keyBreakpoints}--transform--#{$keyTransform} {
-        text-transform: $keyTransform !important;
+        text-transform: $keyTransform;
       }
 
       .#{$keyBreakpoints}--first--letter--transform--#{$keyTransform} {
         &::first-letter {
-          text-transform: $keyTransform !important;
-
+          text-transform: $keyTransform;
         }
       }
     }
@@ -452,7 +455,7 @@
   @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
     @media screen and (min-width: $valueBreakpoint) {
       .#{$keyBreakpoints}--align--#{$keyAlign} {
-        text-align: $keyAlign !important;
+        text-align: $keyAlign;
       }
     }
   }
@@ -467,9 +470,73 @@
   @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
     @media screen and (min-width: $valueBreakpoint) {
       .#{$keyBreakpoints}--position--#{$keyPosition} {
-        position: $keyPosition !important;
+        position: $keyPosition;
       }
     }
   }
 }
 
+//text-decoration-line
+@each $keyTextDecorationLine in $text-decoration {
+  .text--decoration--#{$keyTextDecorationLine} {
+    text-decoration-line: $keyTextDecorationLine;
+  }
+
+  @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
+    @media screen and (min-width: $valueBreakpoint) {
+      .#{$keyBreakpoints}--text--decoration--#{$keyTextDecorationLine} {
+        text-decoration-line: $keyTextDecorationLine;
+      }
+    }
+  }
+}
+
+//text-decoration-line
+@each $keyTextDecorationStyle in $text-decoration-style {
+  .text--decoration--#{$keyTextDecorationStyle} {
+    text-decoration-style: $keyTextDecorationStyle;
+  }
+
+  @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
+    @media screen and (min-width: $valueBreakpoint) {
+      .#{$keyBreakpoints}--text--decoration--#{$keyTextDecorationStyle} {
+        text-decoration-style: $keyTextDecorationStyle;
+      }
+    }
+  }
+}
+
+//cursors
+@each $keyCursor in $cursors {
+  .cursor--#{$keyCursor} {
+    cursor: $keyCursor;
+  }
+
+  @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
+    @media screen and (min-width: $valueBreakpoint) {
+      .#{$keyBreakpoints}--cursor--#{$keyCursor} {
+        cursor: $keyCursor;
+      }
+    }
+  }
+}
+
+//list-style
+@each $keyList in $list-styles {
+  .list--#{$keyList} {
+    list-style: $keyList;
+  }
+
+  @each $keyBreakpoints, $valueBreakpoint in $breakpoints {
+    @media screen and (min-width: $valueBreakpoint) {
+      .#{$keyBreakpoints}--list--#{$keyList} {
+        list-style: $keyList;
+      }
+    }
+  }
+}
+
+//clear fix
+.clear--fix {
+  clear: both;
+}
