@@ -1,3 +1,6 @@
+@import "../variables";
+@import "../breakpoints";
+
 %flex-layout {
   width: 100%;
   display: flex;
@@ -52,13 +55,11 @@
       height: fit-content;
       top: 100%;
       left: 0px;
-      background-color: inherit;
       position: absolute;
       z-index: 1;
       box-shadow: $base-box-shadow;
 
       .item {
-        color: inherit;
         padding-left: 20px;
         display: flex;
         align-items: center;

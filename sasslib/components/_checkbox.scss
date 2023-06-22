@@ -1,4 +1,5 @@
 @use "sass:map";
+@import "../variables";
 
 @mixin checkbox($bg-hover, $bg-checked, $bg-idle) {
   display: flex;
