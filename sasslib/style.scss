@@ -1,6 +1,4 @@
-//variables & functions
-@import "functions";
-@import "variables";
+@layer base, grid, colors, components, utilities;
 
 //base & layout
 @import "base";
@@ -15,10 +13,7 @@
 @import "colors";
 
 //components
-@import "components/card";
-@import "components/button";
-@import "components/navbar";
-@import "components/checkbox";
+@import "components/components";
 
 //utilities
 @import "utilities";
