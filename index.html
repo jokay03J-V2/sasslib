@@ -12,13 +12,14 @@
 <body>
   <nav class="navbar--red text--white mb-4">
     <div class="container">
-      <h2 class="site--title">Shinobi CSS</h2>
-      <label class="navbar--mobile--btn" for="navbar--input">Menu</label>
+      <h2 class="site--title align--center">@jokay03j-v2/sasslib</h2>
+      <label class="navbar--mobile--btn p--1 border--1 border--white border--solid cursor--pointer"
+        for="navbar--input">Menu</label>
       <input type="checkbox" name="navbar--input" id="navbar--input" class="navbar--mobile--checked" />
-      <ul class="items">
-        <li class="item">Home</li>
-        <li class="item">Getting Started</li>
-        <li class="item">Components</li>
+      <ul class="items bg--white text--black md--text--white">
+        <li class="item lg--p--0 ">Home</li>
+        <li class="item lg--p--0">Getting Started</li>
+        <li class="item lg--p--0">Components</li>
       </ul>
     </div>
   </nav>
@@ -125,7 +126,7 @@
   </div>
   <!-- utilities -->
   <h1>relative height & width</h1>
-  <div class="w--6-12 h--6-12 bg--orange--light--1 pl--3">
+  <div class="w--6-12 h--6-12 bg--orange--light--1">
     <h1>1 => 6</h1>
     <pre><code>w--[view]-[max-view]</code></pre>
     <pre><code>w--3-6</code></pre>
@@ -156,6 +157,13 @@
   <div class="h--1 w--1 bg--black position--absolute left--10"></div>
   <p class="float--left">float left</p>
   <p class="float--right">float right</p>
+  <div class="clear--fix"></div>
+  <h1>text decoration</h1>
+  <p class="text--decoration--underline text--decoration--wavy text--decoration--red">wavy underline red</p>
+  <h1>cursor</h1>
+  <ul class="list--square pl--2">
+    <li class="cursor--pointer">pointer</li>
+  </ul>
   <script src="./main.js" type="module"></script>
 </body>
 
